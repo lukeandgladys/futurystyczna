@@ -55,12 +55,7 @@ export default {
       });
     }
   },
-  created() {
-   this.$nuxt.$on('wyemitujTrue', () => {
-    this.wsparcie = true;
-    this.zamykacz = true;
-   })
-},
+
 
 
   mounted() {

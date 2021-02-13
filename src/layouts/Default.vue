@@ -59,8 +59,8 @@ export default {
 
 
   mounted() {
-    var containerMax = document.querySelector(".container");
-    gsap.from(containerMax, 0.6, { opacity: 0, scale: 0.1, x:'80vw'});
+    // var containerMax = document.querySelector(".container");
+    // gsap.from(containerMax, 0.6, { opacity: 0, scale: 0.1, x:'80vw'});
 
     const { title } = this.$refs;
     const { title2 } = this.$refs;

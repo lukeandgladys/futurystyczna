@@ -2,7 +2,7 @@
   <Layout>
     <g-link  to="/"><p  class='zamykacz'  @click="ruszaj" >X</p></g-link>
     <div class="podstrona">
-      <div class="" v-html="richtextToHTML($page.contentfulStrony.nabogato)">
+      <div class="" v-html="$page.contentfulStrony.trescstrony">
     </div>
     </div>
   </Layout>
@@ -13,20 +13,16 @@
     contentfulStrony  (id: $id) {
     nazwa
     id
-    nabogato
+    trescstrony
   }
 }
 
 </page-query>
 <script>
-import { documentToHtmlString } from '@contentful/rich-text-html-renderer'
+
 
 export default {
-  methods: {
-    richtextToHTML (content) {
-      return documentToHtmlString(content)
-    }
-  }
+
 }
 </script>
 

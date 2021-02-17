@@ -15,7 +15,8 @@
 
 
     <slot/>
-  </div>
+
+</div>
 </template>
 
 <static-query>
@@ -32,22 +33,28 @@ import { TimelineLite, TweenMax, gsap } from 'gsap';
 
 
 export default {
+  metaInfo: {
+    title: 'Fundacja',
+
+  },
+
   data()  {
     return {
       name: 'FundacjaFuturystyczna',
       stan: 'brak',
-      zamykacz: false,
-      wsparcie: false
+      zamykacz: false
+
     }
   },
   methods: {
     pokaWsparcie() {
       this.zamykacz = true;
-      this.wsparcie = true;
+
     },
+
     ruszaj() {
       this.zamykacz = false;
-      this.wsparcie = false;
+
       const RUCHY = document.querySelectorAll('.ruch');
         RUCHY.forEach((ruch) => {
                 let wbok = Math.floor((Math.random() * 10) + 1) + 'vw'
@@ -59,8 +66,8 @@ export default {
 
 
   mounted() {
-    // var containerMax = document.querySelector(".container");
-    // gsap.from(containerMax, 0.6, { opacity: 0, scale: 0.1, x:'80vw'});
+
+
 
     const { title } = this.$refs;
     const { title2 } = this.$refs;
@@ -157,20 +164,7 @@ h1 {
   font-weight: normal;
   font-style: normal;
 }
-#fanipay-form-submit,
-#fanipay-header {
-  font-family: aileronsregular,sans-serif !important;
-  z-index: 15474864 !important;
 
-}
-
-#fanipay-wrapper {
-  font-family: 'Conv_Ubuntu-LI' !important;
-  font-weight: normal;
-  font-style: normal;
-  z-index: 15474864 !important;
-
-}
 
 @media (orientation: landscape) {
   .title, .krzywak, .podstrona h1, .podstrona h2, .zamykacz {
@@ -212,10 +206,10 @@ h1 {
     padding: 0.5vh 3vh 65vh 5vh ;
     animation: pokaZamykacz 1s ease-in-out;
   }
-  .zamykacz:hover {
+  /* .zamykacz:hover {
     animation: wysun 0.2s ease-in-out;
     transform: skewX(-20deg) translateX(-15vh);
-  }
+  } */
   hr {
     width: 80vw;
     height: 12vh;
@@ -291,10 +285,10 @@ h1 {
     padding: 21vh 3vh 5vh 1vh ;
     animation: pokaZamykaczMobi 1s ease-in-out;
   }
-  .zamykacz:hover {
+  /* .zamykacz:hover {
 
     transform: skewX(-20deg) translateX(19vh);
-  }
+  } */
   hr {
     width: 90vw;
     height: 4vh;
@@ -323,7 +317,7 @@ h1 {
   background-color: #000;
   color: #fff;
   background-image:  url('../assets/back.svg');
-  overflow: visible;
+  overflow: hidden;
 
 
 }
@@ -418,8 +412,8 @@ ul li {
   align-content: flex-start;
   text-align: left;
 }
-.v-enter-active {  animation: pokaPod 0.5s ease-in-out; }
-.v-leave-active {  animation: znikaPod 0.3s ease-in-out; }
+.podstrona {  animation: pokaPod 0.5s ease-in-out; }
+
 @keyframes pokaPod {
   from {
     transform: translateX(60vw);

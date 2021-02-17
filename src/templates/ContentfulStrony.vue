@@ -5,6 +5,8 @@
       <div class="" v-html="richtextToHTML($page.contentfulStrony.nabogato)">
     </div>
     </div>
+
+
   </Layout>
 </template>
 

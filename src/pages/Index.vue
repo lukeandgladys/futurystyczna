@@ -8,6 +8,10 @@
     <div v-for="edge in $page.allContentfulStrony.edges" :key="edge.node.id">
       <g-link :to="edge.node.path"  ><p class='krzywak ruch'  >{{edge.node.nazwa}}</p></g-link>
     </div>
+
+
+
+
 </div>
 
 
@@ -30,11 +34,15 @@
 </page-query>
 
 
+
+
+
+
 <script>
 export default {
-  metaInfo: {
-    title: 'Fundacja'
-  }
+
+
+
 }
 </script>
 
